@@ -12,7 +12,6 @@
  **/
 
 package net.hires.debug {
-	
 	import flash.display.BitmapData;
 	import flash.display.Sprite;
 	import flash.events.Event;
@@ -22,7 +21,8 @@ package net.hires.debug {
 	import flash.system.System;
 	import flash.text.StyleSheet;
 	import flash.text.TextField;
-	import flash.utils.getTimer;	
+	import flash.utils.getTimer;
+	
 
 	public class Stats extends Sprite {	
 
@@ -82,6 +82,7 @@ package net.hires.debug {
 		}
 
 		private function init(e : Event) : void {
+			removeEventListener(Event.ADDED_TO_STAGE, init);
 			
 			graphics.beginFill(colors.bg);
 			graphics.drawRect(0, 0, WIDTH, HEIGHT);
